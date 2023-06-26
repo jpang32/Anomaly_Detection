@@ -1,0 +1,19 @@
+repos:
+    - repo: https://github.com/psf/black
+      rev: 19.10b0
+      hooks:
+        - id: black
+          additional_dependencies: ['click==8.0.4']
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v2.5.0
+      hooks:
+        - id: check-added-large-files
+    - repo: local
+      hooks:
+        - id: conda-export
+          name: conda-export
+          entry: python -m environment
+          language: python
+          additional_dependencies: [ toml, pyyaml ]
+          pass_filenames: false
+          always_run: true

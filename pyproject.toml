@@ -1,0 +1,5 @@
+[project]
+name = "Anomaly_Detection"
+environment = "Anomaly_Detection"
+version = "1.0"
+description = "Library of anomaly detection tools"
